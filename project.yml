@@ -1,0 +1,23 @@
+name: PreventScreenshotsInSWIFTUI
+options:
+  bundleIdPrefix: com.bleepingswift
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "27.1"
+  generateEmptyDirectories: true
+settings:
+  SWIFT_VERSION: "6.0"
+  SWIFT_STRICT_CONCURRENCY: complete
+targets:
+  PreventScreenshotsInSWIFTUI:
+    type: application
+    platform: iOS
+    sources:
+      - path: PreventScreenshotsInSWIFTUI/Sources
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.bleepingswift.preventscreenshotsinswiftui
+      GENERATE_INFOPLIST_FILE: true
+      INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
+      INFOPLIST_KEY_UILaunchScreen_Generation: true
